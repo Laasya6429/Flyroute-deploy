@@ -17,12 +17,10 @@ async function bootstrap() {
   app.use(cookieParser());
   app.enableCors({
     origin: [
-      'http://localhost:3000',
-      'http://54.206.15.215:3000',
-      'https://airfare-route-finder-frontend.vercel.app',
+      'http://20.17.96.126:3000'
     ],
     credentials: true,
   });
-  await app.listen(process.env.PORT ?? '0.0.0.0');
+  await app.listen(process.env.PORT || 5000, '0.0.0.0');
 }
 bootstrap();
